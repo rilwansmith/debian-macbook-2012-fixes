@@ -76,23 +76,33 @@ You can configure this using either the command line or the graphical settings m
 1. Create the configuration directory for SDDM overrides:
   ```bash
   sudo mkdir -p /etc/sddm.conf.d
-Create and open an autologin configuration file using a text editor (like nano):
+  ```
+2. Create and open an autologin configuration file using a text editor (like nano):  
+```bash
 sudo nano /etc/sddm.conf.d/autologin.conf
-Paste the following configuration block (make sure to replace your-username with your actual Debian login username):
+```
+3. Paste the following configuration block (make sure to replace your-username with your actual Debian login username):
+```bash
 [Autologin]
 User=your-username
 Session=plasma
-Save and exit (In nano: press Ctrl+O, hit Enter, then press Ctrl+X).
+```
+4. Save and exit (In nano: press Ctrl+O, hit Enter, then press Ctrl+X).  
 Reboot your system:
+```bash
 sudo reboot
+```
+---
 
 ### Method B: The Graphical Way (KDE Plasma Settings)
-Note: Since your internal keyboard works fine once you are logged in (or if you temporarily plug in a cheap USB mouse/keyboard to navigate), you can set this up directly through the GUI:
-Open System Settings from your application menu.
-Scroll down on the left sidebar to Startup and Shutdown.
-Click on Login Screen (SDDM).
-Click the "Behavior" tab at the top.
-Check the box for "Automatically log in".
-Select your user account from the dropdown menu and ensure the session type is set to Plasma.
-Click Apply in the bottom-right corner (it will prompt you for your administrator password).
-Reboot your Mac—you will now bypass the broken login screen completely and drop straight into a fully operational desktop with a working keyboard.
+**Note: Since your internal keyboard works fine once you are logged in (or if you temporarily plug in a cheap USB mouse/keyboard to navigate), you can set this up directly through the GUI:**
+
+1. Open **System Settings** from your application menu.  
+2. Scroll down on the left sidebar to **Startup and Shutdown**.  
+3. Click on **Login Screen (SDDM)**.  
+4. Click the **"Behavior"** tab at the top.  
+5. Check the box for **"Automatically log in"**.  
+6. Select your user account from the dropdown menu and ensure the session type is set to **Plasma**.  
+7. Click **Apply** in the bottom-right corner (it will prompt you for your administrator password).  
+8. Reboot your Mac—you will now bypass the broken login screen completely and drop straight into a fully operational desktop with a working keyboard.
+---
